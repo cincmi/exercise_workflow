@@ -1,0 +1,17 @@
+name: ivan_first_wkf
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'trigger manual'
+        required: true
+        default: 'Hola'
+jobs:
+  job1:
+    name: exercici1
+    runs-on: ubuntu-latest
+    steps:
+      - name: primer pas
+        run: |
+          echo "${{github.event.inputs.message}}"
