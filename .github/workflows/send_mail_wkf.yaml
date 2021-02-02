@@ -1,0 +1,25 @@
+name: ivan_send_email_wkf
+
+on:
+  workflow_dispatch:
+jobs:
+  job-email:
+    name: send-email
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Exercici github workflow enviament email
+          # Literal body:
+          body: Bon dia, sóc l'Ivan. T'envio el correu desde ${{github.repository}}. Salut!
+          to: imartinez@imim.es
+          from: Ivan Martinez Campos 
+          # Optional content type (defaults to text/plain):
+          content_type: text/html
+          # Optional converting Markdown to HTML (set content_type to text/html too):
+          convert_markdown: true
