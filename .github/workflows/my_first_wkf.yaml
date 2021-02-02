@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       message:
-        description: 'trigger manual'
+        description: 'Miisatge a mostrar'
         required: true
         default: 'Hola'
 jobs:
