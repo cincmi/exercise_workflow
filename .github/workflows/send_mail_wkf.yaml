@@ -17,7 +17,7 @@ jobs:
           subject: Exercici github workflow enviament email
           # Literal body:
           body: Bon dia, sóc l'Ivan. T'envio el correu desde ${{github.repository}}. Salut!
-          to: imartinez@imim.es
+          to: jmcarbo@imim.es
           from: Ivan Martinez Campos 
           # Optional content type (defaults to text/plain):
           content_type: text/html
